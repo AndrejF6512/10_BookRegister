@@ -1,0 +1,12 @@
+com\book\service\TagwordService.class
+com\book\web\generic\GenericEntityConverter.class
+com\book\service\BaseService.class
+com\book\web\AuthorBean.class
+com\book\domain\TagwordEntity.class
+com\book\web\TagwordBean.class
+com\book\domain\BaseEntity.class
+com\book\web\BookBean.class
+com\book\domain\BookEntity.class
+com\book\domain\AuthorEntity.class
+com\book\service\AuthorService.class
+com\book\service\BookService.class
