@@ -79,8 +79,7 @@ public class TagwordBean implements Serializable {
     }
 
     public TagwordEntity getTagword() {
-        // Need to check for null, because some strange behaviour of f:viewParam
-        // Sometimes it is setting to null
+        
         if (this.tagword == null) {
             this.tagword = new TagwordEntity();
         }
