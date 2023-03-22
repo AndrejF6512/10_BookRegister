@@ -79,8 +79,7 @@ public class AuthorBean implements Serializable {
     }
 
     public AuthorEntity getAuthor() {
-        // Need to check for null, because some strange behaviour of f:viewParam
-        // Sometimes it is setting to null
+      
         if (this.author == null) {
             this.author = new AuthorEntity();
         }
