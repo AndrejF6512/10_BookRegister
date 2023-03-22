@@ -109,7 +109,7 @@ public class BookBean implements Serializable {
         int oldSize = this.tags.getSource().size() + this.tags.getTarget().size();
         int newSize = tagwords.getSource().size() + tagwords.getTarget().size();
         if (oldSize > 0 && newSize == 0) {
-            // Workaroud: Do not let overwrite with empty List.
+            
             return;
         }
         this.tags = tagwords;
@@ -134,8 +134,7 @@ public class BookBean implements Serializable {
     }
 
     public void onTagsPickListTransfer(TransferEvent event) {
-        // If a tag is transferred within the PickList, we just transfer it in this
-        // bean scope. We do not change anything it the database, yet.
+       
         for (Object item : event.getItems()) {
             String id = ((TagwordEntity) item).getId().toString();
             if (event.isAdd()) {
@@ -150,7 +149,7 @@ public class BookBean implements Serializable {
     }
 
     public void onTagsSubmit() {
-        // Now we save the changes of the PickList to the database.
+        
         try {
 
             List<TagwordEntity> availableTagwordsFromDB = bookService.findAvailableTags(this.book);
@@ -189,8 +188,7 @@ public class BookBean implements Serializable {
     }
 
     public BookEntity getBook() {
-        // Need to check for null, because some strange behaviour of f:viewParam
-        // Sometimes it is setting to null
+        
         if (this.book == null) {
             this.book = new BookEntity();
         }
